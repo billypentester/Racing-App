@@ -27,6 +27,11 @@ const Footer = () => {
                 </div>
             </div>
         </footer> 
+        <div className="flex flex-1 justify-center bg-neutral">
+            <div className="w-5/6">
+                <div className="border-t border-neutral-300 "></div>
+            </div>
+        </div>
         <footer className="footer footer-center p-4 bg-neutral text-neutral-content">
             <div>
                 <p>Copyright © 2023 - Racing Car </p>

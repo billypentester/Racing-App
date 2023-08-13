@@ -1,6 +1,11 @@
-import React from 'react'
+import {useState} from 'react'
 
 const Contact = () => {
+
+    const [Name, setName] = useState('')
+    const [Email, setEmail] = useState('')
+    const [Message, setMessage] = useState('')
+
   return (
     <div id="contact" className="container mx-auto px-5 my-16">
         <div className='my-10'>
@@ -14,15 +19,15 @@ const Contact = () => {
             <div className="w-full md:w-1/3 flex flex-col justify-center items-center gap-4">
                 <div class="form-control w-full max-w-full">
                     <label class="label">  <span class="label-text">Name</span></label>
-                    <input type="text" placeholder="Type your name...." class="input input-bordered w-full max-w-full" />
+                    <input type="text" placeholder="Type your name...." class="input input-bordered w-full max-w-full" name='name' value={Name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div class="form-control w-full max-w-full">
                     <label class="label">  <span class="label-text">Email</span></label>
-                    <input type="text" placeholder="Type your name...." class="input input-bordered w-full max-w-full" />
+                    <input type="text" placeholder="Type your name...." class="input input-bordered w-full max-w-full" name='email' value={Email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div class="form-control w-full max-w-full">
                     <label class="label">  <span class="label-text">Message</span></label>
-                    <textarea className="textarea textarea-bordered" placeholder="Write your message here..." rows="5" cols="10" resize="none"></textarea>
+                    <textarea className="textarea textarea-bordered" placeholder="Write your message here..." rows="5" cols="10" resize="none" name='message' value={Message} onChange={(e) => setMessage(e.target.value)}></textarea>
                 </div>
                 <button className="btn btn-neutral btn-wide my-4">Send</button>
             </div>
